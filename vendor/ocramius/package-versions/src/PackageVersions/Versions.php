@@ -95,7 +95,7 @@ final class Versions
   'willdurand/negotiation' => 'v2.3.1@03436ededa67c6e83b9b12defac15384cb399dc9',
   'zendframework/zend-code' => '3.3.0@6b1059db5b368db769e4392c6cb6cc139e56640d',
   'zendframework/zend-eventmanager' => '3.2.0@9d72db10ceb6e42fb92350c0cb54460da61bd79c',
-  'akeneo/pim-community-standard' => 'No version set (parsed as 1.0.0)@',
+  'akeneo/pim-community-standard' => '2.2.x-dev@5a9043dd641be1a6031000b53bb6315621f1da20',
 );
 
     private function __construct()
