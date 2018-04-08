@@ -3,7 +3,6 @@ web/media/*
 web/css/*
 web/js/*
 app/archive/*
-app/config/parameters.yml
 app/config/*_local.yml
 app/import/*
 app/export/*
