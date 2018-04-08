@@ -14,3 +14,11 @@ services:
                 - '@ziyou_connector.step.csv_product_info.export'
         tags:
             - { name: akeneo_batch.job, connector: '%ziyou_connector.connector_name.csv%', type: '%ziyou_connector.job.export_type%' }
+
+    ziyou_connector.provider.form.job_instance:
+        class: '%pim_enrich.provider.form.job_instance.class%'
+        arguments:
+            -
+                csv_product_info_export: pim-job-instance-csv-product-info-export
+        tags:
+            - { name: pim_enrich.provider.form }
