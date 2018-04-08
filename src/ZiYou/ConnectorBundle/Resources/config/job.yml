@@ -19,6 +19,6 @@ services:
         class: '%pim_enrich.provider.form.job_instance.class%'
         arguments:
             -
-                csv_product_info_export: pim-job-instance-csv-product-info-export
+                csv_product_info_export: pim-job-instance-csv-product-export
         tags:
             - { name: pim_enrich.provider.form }
