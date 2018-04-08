@@ -4,14 +4,14 @@ extensions:
 
     pim-job-instance-csv-product-info-export-show-main-image:
         module: pim/form/common/main-image
-        parent: pim-job-instance-csv-product-export-show
+        parent: pim-job-instance-csv-product-info-export-show
         targetZone: main-image
         config:
             path: bundles/pimui/images/illustration-export-csv.svg
 
     pim-job-instance-csv-product-info-export-show-user-navigation:
         module: pim/menu/user-navigation
-        parent: pim-job-instance-csv-product-export-show
+        parent: pim-job-instance-csv-product-info-export-show
         targetZone: user-menu
         config:
             userAccount: pim_menu.user.user_account
@@ -19,14 +19,14 @@ extensions:
 
     pim-job-instance-csv-product-info-export-show-breadcrumbs:
         module: pim/common/breadcrumbs
-        parent: pim-job-instance-csv-product-export-show
+        parent: pim-job-instance-csv-product-info-export-show
         targetZone: breadcrumbs
         config:
             tab: pim-menu-exports
 
     pim-job-instance-csv-product-info-export-show-launch:
         module: pim/job/common/edit/launch
-        parent: pim-job-instance-csv-product-export-show
+        parent: pim-job-instance-csv-product-info-export-show
         targetZone: meta
         position: 110
         config:
@@ -38,13 +38,13 @@ extensions:
 
     pim-job-instance-csv-product-info-export-show-label:
         module: pim/job/common/edit/label
-        parent: pim-job-instance-csv-product-export-show
+        parent: pim-job-instance-csv-product-info-export-show
         targetZone: title
         position: 100
 
     pim-job-instance-csv-product-info-export-show-edit:
         module: pim/common/redirect
-        parent: pim-job-instance-csv-product-export-show
+        parent: pim-job-instance-csv-product-info-export-show
         targetZone: buttons
         position: 100
         config:
@@ -57,14 +57,14 @@ extensions:
 
     pim-job-instance-csv-product-info-export-show-subsection:
         module: pim/form/common/subsection
-        parent: pim-job-instance-csv-product-export-show
+        parent: pim-job-instance-csv-product-info-export-show
         targetZone: content
         config:
             title: pim_enrich.form.job_instance.subsection.last_executions
 
     pim-job-instance-csv-product-info-export-show-grid:
         module: pim/job/common/grid
-        parent: pim-job-instance-csv-product-export-show-subsection
+        parent: pim-job-instance-csv-product-info-export-show-subsection
         position: 1000
         targetZone: content
         config:
