@@ -1,0 +1,20 @@
+parameters:
+    pim_datagrid.extension.pager.orm.pager.class: Pim\Bundle\DataGridBundle\Extension\Pager\Orm\Pager
+    pim_datagrid.extension.pager.pager_resolver.class: Pim\Bundle\DataGridBundle\Extension\Pager\PagerResolver
+
+services:
+    pim_datagrid.extension.pager.orm.pager:
+        class: '%pim_datagrid.extension.pager.orm.pager.class%'
+
+    pim_datagrid.extension.pager.pager_resolver:
+        class: '%pim_datagrid.extension.pager.pager_resolver.class%'
+        arguments:
+            - '@pim_datagrid.extension.pager.orm.pager'
+            - '@oro_datagrid.extension.pager.dummy_pager'
+            -
+                - 'product-grid'
+                - 'association-product-grid'
+                - 'product-variant-group-grid'
+                - 'product-group-grid'
+                - 'published-product-grid'
+                - 'association-product-picker-grid'

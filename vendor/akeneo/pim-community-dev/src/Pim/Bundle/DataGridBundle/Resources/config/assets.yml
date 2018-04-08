@@ -1,0 +1,4 @@
+css:
+    grids:
+        - bundles/pimdatagrid/lib/multiselect/jquery.multiselect.css
+        - bundles/pimdatagrid/lib/multiselect/jquery.multiselect.filter.css

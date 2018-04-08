@@ -1,0 +1,16 @@
+Pim\Component\Catalog\Model\Product:
+    constraints:
+        - Pim\Component\Catalog\Validator\Constraints\UniqueEntity:
+            entityClass: Pim\Component\Catalog\Model\ProductInterface
+    properties:
+        identifier:
+            - NotBlank: ~
+            - Regex:
+                pattern: '/^[^,;]+$/'
+                message: 'regex.comma_or_semicolon.message'
+            - Length:
+                max: 255
+    getters:
+        values:
+            - Symfony\Component\Validator\Constraints\Valid:
+                traverse: true

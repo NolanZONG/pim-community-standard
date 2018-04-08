@@ -1,0 +1,28 @@
+<div class="<%- type %> AknComparableFields-item AknFieldContainer original-field <%- editMode %>">
+    <div class="AknFieldContainer-header">
+        <label class="AknFieldContainer-label" for="<%- fieldId %>">
+            <span class="badge-elements-container"></span>
+            <%- label %>
+            <span class="label-elements-container"></span>
+        </label>
+        <span class="AknFieldContainer-fieldInfo field-info">
+            <% if (locale || scope) { %>
+                <span class="field-context">
+                    <% if (scope) { %> <span class="field-scope"><%- context.scopeLabel %></span> <% } %>
+                    <% if (locale) { %> <span><%= i18n.getFlag(locale) %></span> <% } %>
+                </span>
+            <% } %>
+        </span>
+        <% if (context.optional && context.removable && 'edit' === editMode) { %>
+            <i class="AknIconButton AknIconButton--small icon-remove remove-attribute" data-attribute="<%- attribute.code %>" data-toggle="tooltip" title="<%- _.__('pim_enrich.entity.product.optional_attribute.remove') %>"></i>
+        <% } %>
+    </div>
+    <div class="AknFieldContainer-inputContainer field-input">
+    </div>
+    <footer>
+        <div class="AknFieldContainer-footer footer-elements-container">
+
+        </div>
+    </footer>
+</div>
+<div class="AknComparableFields-item AknComparableFields-item--comparisonContainer AknFieldContainer comparison-elements-container"></div>

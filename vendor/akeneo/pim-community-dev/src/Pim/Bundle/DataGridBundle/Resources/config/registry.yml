@@ -1,0 +1,6 @@
+parameters:
+    pim_datagrid.datagrid.configuration.product.configuration_registry.class: Pim\Bundle\DataGridBundle\Datagrid\Configuration\Product\ConfigurationRegistry
+
+services:
+    pim_datagrid.datagrid.configuration.product.configuration_registry:
+        class: '%pim_datagrid.datagrid.configuration.product.configuration_registry.class%'

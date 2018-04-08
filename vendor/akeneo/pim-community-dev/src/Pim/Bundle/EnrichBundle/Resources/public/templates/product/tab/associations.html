@@ -1,0 +1,38 @@
+<% if (!associationTypes.length) { %>
+    <div class="buffer-top buffer-left">
+        <span class="buffer-small-right">
+            <%- _.__('pim_enrich.form.product.tab.associations.info.none_exist') %>
+        </span>
+    </div>
+<% } else { %>
+    <div class="tabbable">
+        <div class="tab-content">
+            <div class="association-product-grid<% if ('products' !== currentAssociationTarget) { %> hide<% } %>">
+                <div class="AknGrid AknGrid--gallery AknGrid--inner">
+                    <div id="grid-association-product-grid" data-type="datagrid">
+                        <% if (addAssociationVisible) { %>
+                        <div class="AknButtonList AknButtonList--right">
+                            <div class="AknButton AknButton--action AknButtonList-item add-associations">
+                                <%- addAssociationsLabel %>
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+
+            <div class="association-group-grid<% if ('groups' !== currentAssociationTarget) { %> hide<% } %>">
+                <div id="grid-association-group-grid" data-type="datagrid"></div>
+            </div>
+
+            <div class="selection-inputs">
+                <% _.each(associationTypes, function (associationType) { %>
+                    <input type="hidden" id="<%- associationType.code %>-products-appendfield"/>
+                    <input type="hidden" id="<%- associationType.code %>-products-removefield"/>
+                    <input type="hidden" id="<%- associationType.code %>-groups-appendfield"/>
+                    <input type="hidden" id="<%- associationType.code %>-groups-removefield"/>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+<% } %>

@@ -1,0 +1,7 @@
+parameters:
+    oro_translation.controller.class: Oro\Bundle\TranslationBundle\Controller\Controller
+
+services:
+    oro_translation.controller:
+        class: '%oro_translation.controller.class%'
+        arguments: ['@translator', '@templating', 'OroTranslationBundle:Translation:translation.js.twig', '']

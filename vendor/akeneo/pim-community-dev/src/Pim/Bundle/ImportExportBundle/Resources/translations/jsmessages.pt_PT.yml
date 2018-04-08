@@ -1,0 +1,22 @@
+job_execution:
+  summary:
+    display_item: Mostrar item
+    hide_item: Esconder Item
+pim_connector:
+  export:
+    categories:
+      selector:
+        modal:
+          cancel: Cancelar
+          confirm: Confirmar
+        edit: Editar
+    locales:
+      validation:
+        not_blank: Uma linguagem deve ser selecionada, por favor, escolha uma para exportar.
+page_title:
+  pim_importexport_export_profile_index: Gestão de perfis de exportação
+  pim_importexport_export_execution_index: Histórico de exportações realizadas
+  pim_importexport_export_execution_show: Execução de exportações | Detalhes
+  pim_importexport_import_profile_index: Gestão de perfis de importação
+  pim_importexport_import_execution_index: Histórico importações realizadas
+  pim_importexport_import_execution_show: Execução de importações | Detalhes

@@ -1,0 +1,119 @@
+attribute_group_front:
+    resource: '@PimEnrichBundle/Resources/config/routing/attribute_group/front.yml'
+    prefix: /configuration/attribute-group
+
+attribute_group_rest:
+    resource: '@PimEnrichBundle/Resources/config/routing/attribute_group/rest.yml'
+    prefix: /rest/attribute-group
+
+mass_edit_rest:
+    resource: '@PimEnrichBundle/Resources/config/routing/mass_edit/rest.yml'
+    prefix: /rest/mass_edit
+
+sequential_edit_rest:
+    resource: '@PimEnrichBundle/Resources/config/routing/sequential_edit/rest.yml'
+    prefix: /rest/sequential_edit
+
+value_rest:
+    resource: '@PimEnrichBundle/Resources/config/routing/value/rest.yml'
+    prefix: /rest/value
+
+channel:
+    resource: '@PimEnrichBundle/Resources/config/routing/channel.yml'
+    prefix: /configuration/channel
+
+currency:
+    resource: '@PimEnrichBundle/Resources/config/routing/currency.yml'
+    prefix: /configuration/currency
+
+family:
+    resource: '@PimEnrichBundle/Resources/config/routing/family.yml'
+    prefix: /configuration/family
+
+family_variant:
+    resource: '@PimEnrichBundle/Resources/config/routing/family_variant.yml'
+    prefix: /configuration/family-variant
+
+locale:
+    resource: '@PimEnrichBundle/Resources/config/routing/locale.yml'
+    prefix: /configuration/locale
+
+attribute_front:
+    resource: '@PimEnrichBundle/Resources/config/routing/attribute/front.yml'
+    prefix: /configuration/attribute
+
+attribute_rest:
+    resource: '@PimEnrichBundle/Resources/config/routing/attribute/rest.yml'
+    prefix: /rest/attribute
+
+attribute_type:
+    resource: '@PimEnrichBundle/Resources/config/routing/attribute_type/rest.yml'
+    prefix: /rest/attribute-type
+
+attribute_option:
+    resource: '@PimEnrichBundle/Resources/config/routing/attributeoption.yml'
+    prefix: /configuration/attribute-option
+
+category:
+    resource: '@PimEnrichBundle/Resources/config/routing/category.yml'
+    prefix: /enrich/category
+
+categorytree:
+    resource: '@PimEnrichBundle/Resources/config/routing/categorytree.yml'
+    prefix: /enrich/product-category-tree
+
+product:
+    resource: '@PimEnrichBundle/Resources/config/routing/product.yml'
+    prefix: /enrich/product
+
+product_model:
+    resource: '@PimEnrichBundle/Resources/config/routing/product_model.yml'
+    prefix: /enrich/product-model
+
+mass_edit_action:
+    resource: '@PimEnrichBundle/Resources/config/routing/mass_edit_action.yml'
+    prefix: /enrich/mass-edit-action
+
+group:
+    resource: '@PimEnrichBundle/Resources/config/routing/group.yml'
+    prefix: /enrich/group
+
+association:
+    resource: '@PimEnrichBundle/Resources/config/routing/associationtype.yml'
+    prefix: /configuration/association-type
+
+media:
+    resource: '@PimEnrichBundle/Resources/config/routing/media.yml'
+    prefix: /media
+
+grouptype:
+    resource: '@PimEnrichBundle/Resources/config/routing/grouptype.yml'
+    prefix: /configuration/group-type
+
+job_tracker:
+    resource: '@PimEnrichBundle/Resources/config/routing/job_tracker.yml'
+    prefix: /job
+
+api_connection:
+    resource: '@PimEnrichBundle/Resources/config/routing/api_connection.yml'
+    prefix: /client
+
+measures:
+    resource: '@PimEnrichBundle/Resources/config/routing/measures.yml'
+    prefix: /configuration/measures
+
+form_extensions:
+    resource: '@PimEnrichBundle/Resources/config/routing/form_extensions.yml'
+    prefix: /form
+
+media_rest:
+    resource: '@PimEnrichBundle/Resources/config/routing/media_rest.yml'
+    prefix: /rest/media
+
+job_instance_rest:
+    resource: '@PimEnrichBundle/Resources/config/routing/job_instance.yml'
+    prefix: /job-instance
+
+job_execution_rest:
+    resource: '@PimEnrichBundle/Resources/config/routing/job_execution.yml'
+    prefix: /job-execution

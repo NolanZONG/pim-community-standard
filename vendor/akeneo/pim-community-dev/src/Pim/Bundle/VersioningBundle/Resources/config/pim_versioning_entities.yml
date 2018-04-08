@@ -1,0 +1,2 @@
+versionable:
+    - Akeneo\Component\Batch\Model\JobInstance

@@ -1,0 +1,33 @@
+liip_imagine:
+    data_loader: flysystem_data_loader
+    filter_sets:
+        avatar_med:
+            quality:          95
+            format:           png
+            filters:
+                thumbnail:    { size: [58, 58], mode: outbound }
+                strip:        ~
+        preview:
+            quality:          95
+            format:           png
+            filters:
+                thumbnail:    { size: [900, 600], mode: inset }
+                strip:        ~
+        thumbnail:
+            quality:          95
+            format:           png
+            filters:
+                thumbnail:    { size: [320, 240], mode: outbound }
+                strip:        ~
+        thumbnail_small:
+            quality:          95
+            format:           png
+            filters:
+                thumbnail:    { size: [140, 140], mode: outbound }
+                strip:        ~
+        pdf_thumbnail:
+            quality:          95
+            format:           png
+            filters:
+                downscale: { max: [320, 240] }
+                strip:        ~

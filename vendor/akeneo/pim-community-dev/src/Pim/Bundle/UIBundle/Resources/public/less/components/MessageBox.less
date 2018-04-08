@@ -1,0 +1,63 @@
+@import '../base/variables';
+
+.AknMessageBox {
+  border: 1px solid @AknBorderColor;
+  color: @AknDefaultFontColor;
+  background: @AknLightGray;
+  border-radius: 2px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+
+  &-title {
+    display: inline;
+    font-weight: bold;
+    margin-right: 10px;
+    text-transform: uppercase;
+  }
+
+  &--apply {
+    border: 1px solid darken(@AknGreen, 10%);
+    background: lighten(@AknGreen, 30%);
+    color: darken(@AknGreen, 20%);
+  }
+
+  &--warning {
+    border: 1px solid darken(@AknOrange, 10%);
+    background: lighten(@AknOrange, 30%);
+    color: darken(@AknOrange, 20%);
+  }
+
+  &--danger,
+  &--error {
+    border: 1px solid darken(@AknRed, 10%);
+    background: lighten(@AknRed, 30%);
+    color: darken(@AknRed, 20%);
+  }
+
+  &-list {
+    list-style: disc inside none;
+  }
+
+  &--centered {
+    text-align: center;
+  }
+
+  &--hide {
+    display: none;
+  }
+
+  & + & {
+    margin-top: 10px;
+  }
+
+  &--withIcon {
+    background-image: url("../../images/icon-danger.svg");
+    background-repeat: no-repeat;
+    background-position: 8px 50%;
+    padding-left: 40px;
+    font-size: @AknFontSizeBig;
+    font-weight: bold;
+  }
+}

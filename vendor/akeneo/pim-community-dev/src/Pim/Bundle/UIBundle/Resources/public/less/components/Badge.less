@@ -1,0 +1,151 @@
+@import '../base/variables';
+
+.AknBadge {
+  @mediumBadge: 20px;
+
+  line-height: @AknDefaultFontSize + 4px;
+  height: @AknDefaultFontSize + 4px;
+  font-size: @AknDefaultFontSize;
+  background: @AknMediumGrey;
+  color: @AknDefaultFontColor;
+  display: inline-block;
+  border-radius: 100px;
+  padding: 0 8px;
+  transition: background 0.1s ease-in, opacity 0.4s ease-in;
+  white-space: nowrap;
+  margin: 2px 0 -2px 0;
+  text-transform: uppercase;
+  cursor: default;
+
+  &-icon {
+    margin: 0 5px 0 0;
+  }
+
+  &--enabled,
+  &--success {
+    background: @AknGreen;
+    color: white;
+
+    &:hover {
+      background: darken(@AknGreen, 10%);
+    }
+  }
+
+  &--enabled &-icon,
+  &--success &-icon {
+    color: white;
+  }
+
+  &--disabled,
+  &--important,
+  &--invalid {
+    background: @AknRed;
+    color: white;
+
+    &:hover {
+      background: darken(@AknRed, 10%);
+    }
+  }
+
+  &--disabled &-icon,
+  &--important &-icon,
+  &--invalid &-icon {
+    color: white;
+  }
+
+  &--warning {
+    background: @AknOrange;
+    color: white;
+
+    &:hover {
+      background: @AknOrange;
+    }
+  }
+
+  &--warning &-icon {
+    color: white;
+  }
+
+  &--grey {
+    background: @AknGrey;
+    color: white;
+
+    &:hover {
+      background: darken(@AknGrey, 10%);
+    }
+  }
+
+  &--info {
+    background: @AknBlue;
+    color: white;
+
+    &:hover {
+      background: darken(@AknBlue, 10%);
+    }
+  }
+
+  &--active {
+    background: @AknLightPurple;
+    color: white;
+
+    &:hover {
+      background: darken(@AknLightPurple, 10%);
+    }
+  }
+
+  &--highlight {
+    background: @AknOrange;
+  }
+
+  &--light {
+    opacity: 0.2;
+  }
+
+  &--grey &-icon {
+    color: white;
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  &--medium {
+    height: @mediumBadge;
+    min-width: @mediumBadge;
+    line-height: @mediumBadge;
+    font-size: @AknDefaultFontSize;
+    padding: 0 8px;
+  }
+
+  &--big {
+    height: 28px;
+    min-width: 28px;
+    line-height: 28px;
+    font-size: 12px;
+    padding: 0 15px;
+    margin: 0;
+  }
+
+  &--big &-icon {
+    margin: 4px -3px -9px 0
+  }
+
+  &--large {
+    padding: 0 20px;
+  }
+
+  &--small {
+    height: 8px;
+    padding: 0 4px;
+    margin-bottom: 0;
+  }
+
+  &--topRight {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 10px;
+    margin-top: 10px;
+    z-index: 2;
+  }
+}
