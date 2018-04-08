@@ -15,7 +15,8 @@
             "Context": "features/"
         },
         "psr-4": {
-          "Pim\\Upgrade\\": "upgrades/"
+            "Pim\\Upgrade\\": "upgrades/",
+            "ZiYou\\": "src/ZiYou/"
         },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
     },

@@ -36,3 +36,4 @@ yarn.lock
 !/docker/akeneo.conf
 !/docker/httpd.conf
 docker-compose.yml
+.idea/

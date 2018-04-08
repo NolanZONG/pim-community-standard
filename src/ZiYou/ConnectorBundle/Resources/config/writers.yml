@@ -1,0 +1,51 @@
+parameters:
+    ziyou_connector.writer.file.product_info_buffer_flusher.class: ZiYou\ConnectorBundle\Writer\File\ProductInfoBufferFlasher
+
+services:
+    ziyou_connector.writer.file.product_info_buffer_flusher:
+        class: '%ziyou_connector.writer.file.product_info_buffer_flusher.class%'
+        arguments:
+             - '@pim_connector.writer.file.product.column_sorter'
+
+    ziyou_connector.writer.file.csv_product_info:
+        class: '%pim_connector.writer.file.csv_product.class%'
+        arguments:
+            - '@pim_connector.array_converter.standard_to_flat.product_localized'
+            - '@pim_connector.factory.flat_item_buffer'
+            - '@ziyou_connector.writer.file.product_info_buffer_flusher'
+            - '@pim_catalog.repository.attribute'
+            - '@pim_connector.writer.file.media_exporter_path_generator'
+            - ['pim_catalog_file', 'pim_catalog_image']
+
+
+    # CSV Export steps ------------------------------------------------------------------------------------------------
+    ziyou_connector.step.csv_product_info.export:
+        class: '%pim_connector.step.item_step.class%'
+        arguments:
+            - 'export'
+            - '@event_dispatcher'
+            - '@akeneo_batch.job_repository'
+            - '@pim_connector.reader.database.product'
+            - '@pim_connector.processor.normalization.product'
+            - '@ziyou_connector.writer.file.csv_product_info'
+            - 10
+
+    # Job Default ------------------------------------------------------------------------------------------------
+    ziyou_connector.job.job_parameters.default_values_provider.product_info_csv_export:
+        class: '%pim_connector.job.job_parameters.default_values_provider.product_csv_export.class%'
+        arguments:
+            - '@pim_connector.job.job_parameters.default_values_provider.simple_csv_export'
+            - '@pim_catalog.repository.channel'
+            - '@pim_catalog.repository.locale'
+            -
+                - 'csv_product_info_export'
+        tags:
+            - { name: akeneo_batch.job.job_parameters.default_values_provider }
+    ziyou_connector.job.job_parameters.constraint_collection_provider.product_info_csv_export:
+        class: '%pim_connector.job.job_parameters.constraint_collection_provider.product_csv_export.class%'
+        arguments:
+            - '@pim_connector.job.job_parameters.constraint_collection_provider.simple_csv_export'
+            -
+                - 'csv_product_info_export'
+        tags:
+            - { name: akeneo_batch.job.job_parameters.constraint_collection_provider }

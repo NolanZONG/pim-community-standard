@@ -1,0 +1,16 @@
+parameters:
+    ziyou_connector.connector_name.csv: 'ZiYou CSV Connector'
+    ziyou_connector.job_name.csv_product_info_export: 'csv_product_info_export'
+    ziyou_connector.job.export_type: export
+
+services:
+    ziyou_connector.job.csv_product_info_export:
+        class: '%pim_connector.job.simple_job.class%'
+        arguments:
+            - '%ziyou_connector.job_name.csv_product_info_export%'
+            - '@event_dispatcher'
+            - '@akeneo_batch.job_repository'
+            -
+                - '@ziyou_connector.step.csv_product_info.export'
+        tags:
+            - { name: akeneo_batch.job, connector: '%ziyou_connector.connector_name.csv%', type: '%ziyou_connector.job.export_type%' }
